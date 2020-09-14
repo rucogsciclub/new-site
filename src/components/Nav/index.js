@@ -15,9 +15,9 @@ const NavContainer = styled.div`
   padding: 0 128px 0 27px;
   background: #cc0033;
 
-  ${media.lessThan("desktop")} {
+  ${media.lessThan("desktop")`
     padding: 15px 23px;
-  }
+  `}
 `;
 
 const NavLogo = styled.img`
