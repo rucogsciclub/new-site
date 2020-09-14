@@ -8,6 +8,7 @@ export const NAV_HEIGHT = 85;
 
 const NavContainer = styled.div`
   height: ${NAV_HEIGHT}px;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
