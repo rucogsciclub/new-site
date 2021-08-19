@@ -80,16 +80,16 @@ const Footer = () => {
           <FooterColumnHeader>Site Map</FooterColumnHeader>
           <FooterLink to="/">Home</FooterLink>
           <FooterLink to="/calendar">Calendar</FooterLink>
-          <FooterLink to="/e-board">E-Board</FooterLink>
-          <FooterLink to="/merch">Merchandise</FooterLink>
-          <FooterLink to="/spotlight">Spotlight</FooterLink>
-          <FooterLink href="#">Class Help</FooterLink>
-          <FooterLink href="#">Blog</FooterLink>
+          {/*<FooterLink to="/e-board">E-Board</FooterLink>*/}
+          {/*<FooterLink to="/merch">Merchandise</FooterLink>*/}
+          {/*<FooterLink to="/spotlight">Spotlight</FooterLink>*/}
+          {/*<FooterLink href="#">Class Help</FooterLink>*/}
+          {/*<FooterLink href="#">Blog</FooterLink>*/}
         </FooterColumn>
 
         <FooterColumn>
           <FooterColumnHeader>Location</FooterColumnHeader>
-          <FooterLink>
+          <FooterLink href="https://goo.gl/maps/jkRghQXtty6aLpMq9">
             15 Seminary Place,
             <br /> New Brunswick, NJ <br />
             08901
@@ -107,19 +107,19 @@ const Footer = () => {
           <FooterLink href="https://twitter.com/rucogsciclub/">
             Twitter
           </FooterLink>
-          <FooterLink href="#">Discord</FooterLink>
+          <FooterLink href="https://discord.gg/D5tN6CcAZG">Discord</FooterLink>
         </FooterColumn>
 
-        <FooterColumn>
+        {/*<FooterColumn>
           <FooterColumnHeader>Terms</FooterColumnHeader>
           <FooterLink>Mission Statement</FooterLink>
           <FooterLink>Bylaws</FooterLink>
           <FooterLink>Constitution</FooterLink>
-        </FooterColumn>
+        </FooterColumn>*/}
       </FooterContainer>
 
       <CopyrightContainer>
-        <span>Copyright &copy; 2020</span> <span>•</span>{" "}
+        <span>Copyright &copy; 2021</span> <span>•</span>{" "}
         <span>All rights reserved.</span>
       </CopyrightContainer>
     </Container>
