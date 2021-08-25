@@ -126,6 +126,15 @@ const CalendarEventDesc = styled.p`
   color: #000000;
 `;
 
+const CalendarEventLocation = styled.p`
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 28px;
+  color: #cc0033;
+`;
+
 const StickyContainer = styled.div`
   position: sticky;
   top: 0;
@@ -202,6 +211,7 @@ const CalendarEvent = ({
   month = 0,
   title = "",
   desc = "",
+  loc = "",
   active = false,
 }) => {
   const daysOfWeek = ["Mon", "Tue", "Wed", "Thu", "Fri"];
@@ -216,6 +226,7 @@ const CalendarEvent = ({
       </DateContainer>
       <CalendarEventStack>
         <CalendarEventTitle>{title}</CalendarEventTitle>
+        <CalendarEventLocation>{loc}</CalendarEventLocation>
         <CalendarEventDesc>{desc}</CalendarEventDesc>
       </CalendarEventStack>
     </CalendarEventContainer>
@@ -230,6 +241,7 @@ const Calendar = () => {
       day: 8,
       month: 8, /*Remember that months are by index, so september would be 9-1, so 8 would be the input! */
       title: "General Interest Meeting",
+      loc: " @ BSC 117",
       desc:
         "Come through to our new room in the Busch Student Center (Room 117) and hear about the club. Learn about the events we do, sign up for our email chain, meet some of the team, and learn about our mentoring program. Hope to see you all there!",
     },
@@ -237,8 +249,25 @@ const Calendar = () => {
       day: 15,
       month: 8,
       title: "Speaker Series Event with: [REDACTED]",
+      loc: " @ Zoom",
       desc:
-        "Come through to hear our first speaker event with [REDACTED]! Hear about whats going on in the Cog Sci community as well as the research and work of [REDACTED]. A great way to network and keep up to date with the industry and research community!",
+        "Join our Zoom to hear our first speaker event with [REDACTED]! Hear about whats going on in the Cog Sci community as well as the research and work of [REDACTED]. A great way to network and keep up to date with the industry and research community!",
+    },
+    {
+      day: 22,
+      month: 8,
+      title: "Neurofreaks Meeting",
+      loc: " @ Zoom",
+      desc:
+        "Come on down to our meeting room to hear about Neurofreaks, a new collaboration with Rutgers Cog Sci, and hear about the cool work they're doing!",
+    },
+    {
+      day: 29,
+      month: 8,
+      title: "Alumni Speaker: [REDACTED]",
+      loc: " @ Zoom",
+      desc:
+        "Join our zoom to hear our first Alumni speaker: [REDACTED] and their experiences with the Cog Sci club, and what they're up to post graduation. A great experience for those looking to persue Cog Sci as a major @ Rutgers!",
     },
   ]);
 
@@ -268,6 +297,7 @@ const Calendar = () => {
                 month = {event.month}
                 /*dayOfWeek={event.dayOfWeek} Commenting this out for future use*/
                 title={event.title}
+                loc = {event.loc}
                 desc={event.desc}
                 active={index === 0}
               />
