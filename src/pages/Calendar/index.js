@@ -257,9 +257,9 @@ const Calendar = () => {
       day: 22,
       month: 8,
       title: "Neurofreaks Meeting",
-      loc: " @ Zoom",
+      loc: " @ BSC117",
       desc:
-        "Come on down to our meeting room to hear about Neurofreaks, a new collaboration with Rutgers Cog Sci, and hear about the cool work they're doing!",
+        "Hop on our meeting room to hear about Neurofreaks, a new collaboration with Rutgers Cog Sci, and hear about the cool work they're doing!",
     },
     {
       day: 29,
@@ -269,6 +269,78 @@ const Calendar = () => {
       desc:
         "Join our zoom to hear our first Alumni speaker: [REDACTED] and their experiences with the Cog Sci club, and what they're up to post graduation. A great experience for those looking to persue Cog Sci as a major @ Rutgers!",
     },
+    {
+      day: 6,
+      month: 9, /*This is a switch to 9 since it is an october event :) */
+      title: "Neurofreaks Meeting",
+      loc: " @ BSC117",
+      desc:
+        "Come down to our room for our second meeting with Neurofreaks, ask your questions and inqure further about the cool work they're doing and our collaboration with them!",
+    },
+    {
+      day: 13,
+      month: 9, /*This is a switch to 9 since it is an october event :) */
+      title: "Speaker Series Event with: [REDACTED]",
+      loc: " @ Zoom",
+      desc:
+        "Join our Zoom to hear our second speaker event, this time with: [REDACTED]! Hear about whats going on in the Cog Sci community as well as the research and work of [REDACTED]. A great way to network and keep up to date with the industry and research community!",
+    },
+    {
+      day: 20,
+      month: 9, /*This is a switch to 9 since it is an october event :) */
+      title: "Dr. Tobia Movie Night",
+      loc: " @ BSC 117",
+      desc: "Bring your popcorn and blankets! Come through to the Rutgers Cog Sci Movie Night, with Dr. Tobia. We'll watch and discuss our favorite movies in a psychological framework. If you wanted to discuss your own breakdown of legendary film characters, be sure not to miss this event!"
+    },
+    {
+      day: 27,
+      month: 9, /*This is a switch to 9 since it is an october event :) */
+      title: "Speaker Series Event with: [REDACTED]",
+      loc: " @ Zoom",
+      desc:
+        "Join our Zoom to hear our third speaker event, this time with: [REDACTED]! Hear about whats going on in the Cog Sci community as well as the research and work of [REDACTED]. A great way to network and keep up to date with the industry and research community!",
+    },
+    {
+      day: 3,
+      month: 10, 
+      title: "Neurofreaks Meeting",
+      loc: " @ BSC117",
+      desc:
+        "Come down to our room for our third meeting with Neurofreaks, ask your questions and inqure further about the cool work they're doing and our collaboration with them!",
+    },
+    {
+      day: 10,
+      month: 10, 
+      title: "Speaker Series Event with: [REDACTED]",
+      loc: " @ Zoom",
+      desc:
+        "Join our Zoom to hear our fourth speaker event, this time with: [REDACTED]! Hear about whats going on in the Cog Sci community as well as the research and work of [REDACTED]. A great way to network and keep up to date with the industry and research community!",
+    },
+    {
+      day: 17,
+      month: 10, 
+      title: "Speaker Series Event with: [REDACTED]",
+      loc: " @ Zoom",
+      desc:
+        "Join our Zoom to hear our FINAL speaker event, this time with: [REDACTED]! Hear about whats going on in the Cog Sci community as well as the research and work of [REDACTED]. A great way to network and keep up to date with the industry and research community!",
+    },
+    {
+      day: 1,
+      month: 11, 
+      title: "Game Night",
+      loc: " @ BSC117",
+      desc:
+        "Relax before finals and destress with us during our end of the semester Cog Sci game night. A casual and fun way to meet with fellow Cog Sci Members as well as chat with the E-Board before finals!"
+    },
+    {
+      day: 8,
+      month: 11, /* represents december */
+      title: "Alumni Speaker: [REDACTED]",
+      loc: " @ Zoom",
+      desc:
+        "Join our zoom to hear our FINAL Alumni speaker: [REDACTED] and their experiences with the Cog Sci club, and what they're up to post graduation. A great experience for those looking to persue Cog Sci as a major @ Rutgers!",
+    },
+
   ]);
 
   return (
