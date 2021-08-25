@@ -199,16 +199,19 @@ const ReminderCard = ({ title, meta, desc }) => {
 const CalendarEvent = ({
   day = 0,
   dayOfWeek = 0,
+  month = 0,
   title = "",
   desc = "",
   active = false,
 }) => {
   const daysOfWeek = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  const months = ["Jan", "Feb", "Mar", "Apl", "May", "Jne", "Jly", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
   return (
     <CalendarEventContainer>
       <DateContainer active={active}>
-        {daysOfWeek[dayOfWeek]}
+        {months[month]}
+        {/*{daysOfWeek[dayOfWeek]} This is hardcoded text, kind of useless if theres no month*/}
         <DateContainerDay>{(day + "").padStart(2, "0")}</DateContainerDay>
       </DateContainer>
       <CalendarEventStack>
@@ -224,18 +227,18 @@ const Calendar = () => {
   const [selectedIndex, setSelectedIndex] = React.useState(0);
   const [calendarEvents, setCalendarEvents] = React.useState([
     {
-      day: 7,
-      dayOfWeek: 0,
-      title: "Event Title Here.",
+      day: 8,
+      month: 8, /*Remember that months are by index, so september would be 9-1, so 8 would be the input! */
+      title: "General Interest Meeting",
       desc:
-        "Lorem ipsum dolor sit amet, ipsum dolor sit amet, consectetur adipiscing elit, sed d ipsum dolor sit amet, consectetur adipiscing elit, sed d ipsum dolor sit amet, consectetur adipiscing elit, sed d ipsum dolor sit amet, consectetur adipiscing elit, sed d consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua sed do eiusmod tempor incididunt sed do eiusmod tempor incididunt.",
+        "Come through to our new room in the Busch Student Center (Room 117) and hear about the club. Learn about the events we do, sign up for our email chain, meet some of the team, and learn about our mentoring program. Hope to see you all there!",
     },
     {
-      day: 7,
-      dayOfWeek: 0,
-      title: "Event Title Here.",
+      day: 15,
+      month: 8,
+      title: "Speaker Series Event with: [REDACTED]",
       desc:
-        "Lorem ipsum dolor sit amet, ipsum dolor sit amet, consectetur adipiscing elit, sed d ipsum dolor sit amet, consectetur adipiscing elit, sed d ipsum dolor sit amet, consectetur adipiscing elit, sed d ipsum dolor sit amet, consectetur adipiscing elit, sed d consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua sed do eiusmod tempor incididunt sed do eiusmod tempor incididunt.",
+        "Come through to hear our first speaker event with [REDACTED]! Hear about whats going on in the Cog Sci community as well as the research and work of [REDACTED]. A great way to network and keep up to date with the industry and research community!",
     },
   ]);
 
@@ -262,7 +265,8 @@ const Calendar = () => {
             {calendarEvents.map((event, index) => (
               <CalendarEvent
                 day={event.day}
-                dayOfWeek={event.dayOfWeek}
+                month = {event.month}
+                /*dayOfWeek={event.dayOfWeek} Commenting this out for future use*/
                 title={event.title}
                 desc={event.desc}
                 active={index === 0}

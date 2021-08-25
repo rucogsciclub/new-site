@@ -89,10 +89,11 @@ const Footer = () => {
 
         <FooterColumn>
           <FooterColumnHeader>Location</FooterColumnHeader>
-          <FooterLink href="https://goo.gl/maps/jkRghQXtty6aLpMq9">
-            15 Seminary Place,
-            <br /> New Brunswick, NJ <br />
-            08901
+          <FooterLink href="https://goo.gl/maps/vGWcz4s9m6SSBCut9">
+          604 Bartholomew Rd, 
+            <br />Piscataway, NJ<br />
+            08854 
+            <br />(Busch Student Center R117) <br />
           </FooterLink>
         </FooterColumn>
 
