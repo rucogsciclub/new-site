@@ -244,6 +244,7 @@ const Calendar = () => {
       loc: " @ BSC 117",
       desc:
         "Come through to our new room in the Busch Student Center (Room 117) and hear about the club. Learn about the events we do, sign up for our email chain, meet some of the team, and learn about our mentoring program. Hope to see you all there!",
+      active: false
     },
     {
       day: 15,
@@ -251,7 +252,7 @@ const Calendar = () => {
       title: "Speaker Series Event with: [REDACTED]",
       loc: " @ Zoom",
       desc:
-        "Join our Zoom to hear our first speaker event with [REDACTED]! Hear about whats going on in the Cog Sci community as well as the research and work of [REDACTED]. A great way to network and keep up to date with the industry and research community!",
+        "Join our Zoom to hear our first speaker event with [REDACTED]! Hear about whats going on in the Cog Sci community as well as the research and work of [REDACTED]. A great way to network and keep up to date with the industry and research community!", 
     },
     {
       day: 22,
@@ -275,7 +276,7 @@ const Calendar = () => {
       title: "Neurofreaks Meeting",
       loc: " @ BSC117",
       desc:
-        "Come down to our room for our second meeting with Neurofreaks, ask your questions and inqure further about the cool work they're doing and our collaboration with them!",
+        "Come down to our room for our second meeting with Neurofreaks, ask your questions and inqure further about the cool work they're doing. Additionally, this will be the start of our debates based on set Neurofreaks topics!",
     },
     {
       day: 13,
@@ -306,7 +307,7 @@ const Calendar = () => {
       title: "Neurofreaks Meeting",
       loc: " @ BSC117",
       desc:
-        "Come down to our room for our third meeting with Neurofreaks, ask your questions and inqure further about the cool work they're doing and our collaboration with them!",
+        "Come down to our room for our third meeting with Neurofreaks! It's time for another debate!",
     },
     {
       day: 10,

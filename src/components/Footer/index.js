@@ -80,7 +80,7 @@ const Footer = () => {
           <FooterColumnHeader>Site Map</FooterColumnHeader>
           <FooterLink to="/">Home</FooterLink>
           <FooterLink to="/calendar">Calendar</FooterLink>
-          {/*<FooterLink to="/e-board">E-Board</FooterLink>*/}
+          <FooterLink to="/e-board">E-Board</FooterLink>
           {/*<FooterLink to="/merch">Merchandise</FooterLink>*/}
           {/*<FooterLink to="/spotlight">Spotlight</FooterLink>*/}
           {/*<FooterLink href="#">Class Help</FooterLink>*/}
