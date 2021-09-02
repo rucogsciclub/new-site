@@ -31,11 +31,25 @@ const BoardMemberContainer = styled.div`
   justifyContent: 'center';
 `;
 
+const BoardMemberMajor = styled.div`
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 200x;
+  line-height: 140.62%;
+  text-align: center;
+  display: flex;
+  justifyContent: 'center';
+  flex-direction: column;
+
+  color: #000000;
+`;
+
 const BoardMemberName = styled.div`
   font-family: Lato;
   font-style: normal;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 20px;
   line-height: 140.62%;
   color: #000000;
   text-align: center;
@@ -60,11 +74,12 @@ const BoardMemberPosition = styled.div`
   color: #000000;
 `;
 
-const BoardMember = ({ name, position, image }) => {
+const BoardMember = ({ name, major, position, image }) => {
   return (
     <BoardMemberContainer>
       <BoardMemberProfile src={image}></BoardMemberProfile>
       <BoardMemberName>{name}</BoardMemberName>
+      <BoardMemberMajor>Major: {major}</BoardMemberMajor>
       <BoardMemberPosition>{position}</BoardMemberPosition>
     </BoardMemberContainer>
   );
@@ -72,23 +87,23 @@ const BoardMember = ({ name, position, image }) => {
 
 const ExecutiveBoard = () => {
   const members = [
-    { name: "Ayaan Memon", position: "President", image: "AYAAN.png" },
+    { name: "Ayaan Memon",  major: "CBN, Music", position: "President", image: "AYAAN.png" },
 
-    { name: "Luna Lee", position: "Vice President", image: "LUNA.jpg" },
+    { name: "Luna Lee", major: "HR, Psychology", position: "Vice President", image: "LUNA.jpg" },
 
-    { name: "Peter Tilton", position: "Treasurer", image: "PETER.jpg" },
-    { name: "Veda Kota", position: "Event Coordinator", image: "VEDA.jpg" },
+    { name: "Peter Tilton", major: "CS, Cog Sci", position: "Treasurer", image: "PETER.jpg" },
+    { name: "Veda Kota", major: "Cog Sci, Philosophy", position: "Event Coordinator", image: "VEDA.jpg" },
 
-    { name: "Connie Chen", position: "Event Coordinator" , image: "logo.png" }, /*logo indicates missing picture*/
+    { name: "Connie Chen", major: "CS, Cog Sci", position: "Event Coordinator" , image: "logo.png" }, /*logo indicates missing picture*/
 
-    { name: "Cynthia Chen", position: "Graphic Designer", image: "CYNTHIA.jpg" },
+    { name: "Cynthia Chen",  major: "Cog Sci", position: "Graphic Designer", image: "CYNTHIA.jpg" },
 
-    { name: "Jessica Kehoe", position: "Graphic Designer", image: "logo.png" },
-    { name: "Amr Ahmed", position: "Technology Director", image: "logo.png" },
-    { name: "Aarif Razak", position: "Technology Director", image: "AARIF.jpg" },
-    { name: "Duncan Wood", position: "Community Director", image: "DUNCAN.jpg" },
-    { name: "Maryam Khalid", position: "Marketing Director", image: "MARYAM.jpg" },
-    { name: "Katherine Liu", position: "Marketing Director", image: "KATHERINE.jpg" },
+    { name: "Jessica Kehoe", major: "Cog Sci", position: "Graphic Designer", image: "logo.png" },
+    { name: "Amr Ahmed", major: "Computer Science", position: "Technology Director", image: "AMR.png" },
+    { name: "Aarif Razak",  major: "CS, Psychology", position: "Technology Director", image: "AARIF.jpg" },
+    { name: "Duncan Wood",  major: "Economics, CS",  position: "Community Director", image: "DUNCAN.jpg" },
+    { name: "Maryam Khalid", major: "Cog Sci", position: "Marketing Director", image: "MARYAM.jpg" },
+    { name: "Katherine (Kate) Liu", major: "Computer Science", position: "Marketing Director", image: "KATHERINE.jpg" },
 
 
 
@@ -103,7 +118,7 @@ const ExecutiveBoard = () => {
 
       <PageContainer>
         {members.map((member) => (
-          <BoardMember name={member.name} position={member.position} image={member.image} />
+          <BoardMember name={member.name} major = {member.major} position={member.position} image={member.image} />
         ))}
       </PageContainer>
     </MainPage>
