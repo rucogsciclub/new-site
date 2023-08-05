@@ -106,7 +106,7 @@ const Jumbo = () => (
           Cognitive Science Club!
         </JumboRightText>
       </JumboTextContainer>
-      <DesktopOnly>
+      *<DesktopOnly>
         <ContactUsButton>Contact Us</ContactUsButton>
       </DesktopOnly>
     </JumboInnerContainer>

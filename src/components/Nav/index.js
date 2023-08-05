@@ -101,8 +101,8 @@ const Nav = () => {
             </NavLink>
             <NavLink to="/calendar">Calendar</NavLink>
             <NavLink to="/e-board">E-Board</NavLink>
-            <NavLink to="/merch">Merch</NavLink>
-            <NavLink to="/spotlight">Spotlight</NavLink>
+            {/*<NavLink to="/merch">Merch</NavLink>*/}
+            {/*<NavLink to="/spotlight">Spotlight</NavLink>*/}
           </NavLinks>
         </AnimateSharedLayout>
       </DesktopOnly>

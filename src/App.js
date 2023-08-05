@@ -18,8 +18,8 @@ const App = () => (
       <Route exact path="/" component={Home} />
       <Route path="/calendar" component={Calendar} />
       <Route path="/e-board" component={ExecutiveBoard} />
-      <Route path="/merch" component={Merchandise} />
-      <Route path="/spotlight" component={Spotlight} />
+      {/*<Route path="/merch" component={Merchandise} />*/}
+      {/*<Route path="/spotlight" component={Spotlight} />*/}
     </Switch>
 
     <Footer />

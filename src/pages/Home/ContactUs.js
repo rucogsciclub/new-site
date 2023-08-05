@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import EmailLink from "../../EmailLink";
+import DiscordLink from "../../DiscordLink"
 
 const Header = styled.h1`
   font-family: Lato;
@@ -32,12 +33,12 @@ const ContactUs = () => (
   <Container>
     <Header>Need to Contact Us?</Header>
     <P>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.
+      We're always looking to hear from you! Whether it's questions, comments,
+      concerns, or ideas for the club, feel free to send us an email! 
+      You can also keep in touch with all things RU-CogSci by joining our Discord.
     </P>
     <EmailLink email="rutgerscognitivescienceclub@gmail.com" />
+    <DiscordLink inviteLink= "Join our Discord!" />
   </Container>
 );
 

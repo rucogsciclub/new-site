@@ -81,18 +81,19 @@ const Footer = () => {
           <FooterLink to="/">Home</FooterLink>
           <FooterLink to="/calendar">Calendar</FooterLink>
           <FooterLink to="/e-board">E-Board</FooterLink>
-          <FooterLink to="/merch">Merchandise</FooterLink>
-          <FooterLink to="/spotlight">Spotlight</FooterLink>
-          <FooterLink href="#">Class Help</FooterLink>
-          <FooterLink href="#">Blog</FooterLink>
+          {/*<FooterLink to="/merch">Merchandise</FooterLink>*/}
+          {/*<FooterLink to="/spotlight">Spotlight</FooterLink>*/}
+          {/*<FooterLink href="#">Class Help</FooterLink>*/}
+          {/*<FooterLink href="#">Blog</FooterLink>*/}
         </FooterColumn>
 
         <FooterColumn>
           <FooterColumnHeader>Location</FooterColumnHeader>
-          <FooterLink>
-            15 Seminary Place,
-            <br /> New Brunswick, NJ <br />
-            08901
+          <FooterLink href="https://goo.gl/maps/vGWcz4s9m6SSBCut9">
+          604 Bartholomew Rd, 
+            <br />Piscataway, NJ<br />
+            08854 
+            <br />(Busch Student Center R117) <br />
           </FooterLink>
         </FooterColumn>
 
@@ -107,19 +108,19 @@ const Footer = () => {
           <FooterLink href="https://twitter.com/rucogsciclub/">
             Twitter
           </FooterLink>
-          <FooterLink href="#">Discord</FooterLink>
+          <FooterLink href="https://discord.gg/D5tN6CcAZG">Discord</FooterLink>
         </FooterColumn>
 
-        <FooterColumn>
+        {/*<FooterColumn>
           <FooterColumnHeader>Terms</FooterColumnHeader>
           <FooterLink>Mission Statement</FooterLink>
           <FooterLink>Bylaws</FooterLink>
           <FooterLink>Constitution</FooterLink>
-        </FooterColumn>
+        </FooterColumn>*/}
       </FooterContainer>
 
       <CopyrightContainer>
-        <span>Copyright &copy; 2020</span> <span>•</span>{" "}
+        <span>Copyright &copy; 2021</span> <span>•</span>{" "}
         <span>All rights reserved.</span>
       </CopyrightContainer>
     </Container>

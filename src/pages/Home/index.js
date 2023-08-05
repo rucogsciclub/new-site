@@ -23,13 +23,13 @@ const Home = () => (
             title: "About Us",
             img: "eboard.png",
             text:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+              "The Rutgers University Cognitive Scicence Club (RU-CogSci) is a student run organization at Rutgers university, of course! Members of our club are passionate about the field of cognitive science and are interested in impacting the world through a deeper understanding of the brain and mind. As a club, our focus is to provide a rich, diverse community to encourage the development of the personal, academic, and professional life of undergraduate students that have a passion in cognitive science.",
           },
           {
             title: "Mission and Values",
             img: "neuro.png",
             text:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+              "The purpose of this organization shall be to provide a network for students with an interest in cognitive science. Our organization seeks to empower members to engage in a strong network, build lasting relationships, expand thinking, and respect and encourage diversity of thought. We will expose students to scientific literature of the interdisciplinary of cognitive science, guest speakers, and events that will help students in their professional growth. We shall also strive to raise awareness of the cognitive science field, major, minor, and research options in the Rutgers University community.",
           },
         ]}
       />

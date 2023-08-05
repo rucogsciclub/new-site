@@ -126,6 +126,15 @@ const CalendarEventDesc = styled.p`
   color: #000000;
 `;
 
+const CalendarEventLocation = styled.p`
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 28px;
+  color: #cc0033;
+`;
+
 const StickyContainer = styled.div`
   position: sticky;
   top: 0;
@@ -199,20 +208,25 @@ const ReminderCard = ({ title, meta, desc }) => {
 const CalendarEvent = ({
   day = 0,
   dayOfWeek = 0,
+  month = 0,
   title = "",
   desc = "",
+  loc = "",
   active = false,
 }) => {
   const daysOfWeek = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  const months = ["Jan", "Feb", "Mar", "Apl", "May", "Jne", "Jly", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
   return (
     <CalendarEventContainer>
       <DateContainer active={active}>
-        {daysOfWeek[dayOfWeek]}
+        {months[month]}
+        {/*{daysOfWeek[dayOfWeek]} This is hardcoded text, kind of useless if theres no month*/}
         <DateContainerDay>{(day + "").padStart(2, "0")}</DateContainerDay>
       </DateContainer>
       <CalendarEventStack>
         <CalendarEventTitle>{title}</CalendarEventTitle>
+        <CalendarEventLocation>{loc}</CalendarEventLocation>
         <CalendarEventDesc>{desc}</CalendarEventDesc>
       </CalendarEventStack>
     </CalendarEventContainer>
@@ -224,19 +238,110 @@ const Calendar = () => {
   const [selectedIndex, setSelectedIndex] = React.useState(0);
   const [calendarEvents, setCalendarEvents] = React.useState([
     {
-      day: 7,
-      dayOfWeek: 0,
-      title: "Event Title Here.",
+      day: 8,
+      month: 8, /*Remember that months are by index, so september would be 9-1, so 8 would be the input! */
+      title: "General Interest Meeting",
+      loc: " @ BSC 117",
       desc:
-        "Lorem ipsum dolor sit amet, ipsum dolor sit amet, consectetur adipiscing elit, sed d ipsum dolor sit amet, consectetur adipiscing elit, sed d ipsum dolor sit amet, consectetur adipiscing elit, sed d ipsum dolor sit amet, consectetur adipiscing elit, sed d consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua sed do eiusmod tempor incididunt sed do eiusmod tempor incididunt.",
+        "Come through to our new room in the Busch Student Center (Room 117) and hear about the club. Learn about the events we do, sign up for our email chain, meet some of the team, and learn about our mentoring program. Hope to see you all there!",
+      active: false
     },
     {
-      day: 7,
-      dayOfWeek: 0,
-      title: "Event Title Here.",
+      day: 15,
+      month: 8,
+      title: "Speaker Series Event with: [REDACTED]",
+      loc: " @ Zoom",
       desc:
-        "Lorem ipsum dolor sit amet, ipsum dolor sit amet, consectetur adipiscing elit, sed d ipsum dolor sit amet, consectetur adipiscing elit, sed d ipsum dolor sit amet, consectetur adipiscing elit, sed d ipsum dolor sit amet, consectetur adipiscing elit, sed d consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua sed do eiusmod tempor incididunt sed do eiusmod tempor incididunt.",
+        "Join our Zoom to hear our first speaker event with [REDACTED]! Hear about whats going on in the Cog Sci community as well as the research and work of [REDACTED]. A great way to network and keep up to date with the industry and research community!", 
     },
+    {
+      day: 22,
+      month: 8,
+      title: "Neurofreaks Meeting",
+      loc: " @ BSC117",
+      desc:
+        "Hop on our meeting room to hear about Neurofreaks, a new collaboration with Rutgers Cog Sci, and hear about the cool work they're doing!",
+    },
+    {
+      day: 29,
+      month: 8,
+      title: "Alumni Speaker: [REDACTED]",
+      loc: " @ Zoom",
+      desc:
+        "Join our zoom to hear our first Alumni speaker: [REDACTED] and their experiences with the Cog Sci club, and what they're up to post graduation. A great experience for those looking to persue Cog Sci as a major @ Rutgers!",
+    },
+    {
+      day: 6,
+      month: 9, /*This is a switch to 9 since it is an october event :) */
+      title: "Neurofreaks Meeting",
+      loc: " @ BSC117",
+      desc:
+        "Come down to our room for our second meeting with Neurofreaks, ask your questions and inqure further about the cool work they're doing. Additionally, this will be the start of our debates based on set Neurofreaks topics!",
+    },
+    {
+      day: 13,
+      month: 9, /*This is a switch to 9 since it is an october event :) */
+      title: "Speaker Series Event with: [REDACTED]",
+      loc: " @ Zoom",
+      desc:
+        "Join our Zoom to hear our second speaker event, this time with: [REDACTED]! Hear about whats going on in the Cog Sci community as well as the research and work of [REDACTED]. A great way to network and keep up to date with the industry and research community!",
+    },
+    {
+      day: 20,
+      month: 9, /*This is a switch to 9 since it is an october event :) */
+      title: "Dr. Tobia Movie Night",
+      loc: " @ BSC 117",
+      desc: "Bring your popcorn and blankets! Come through to the Rutgers Cog Sci Movie Night, with Dr. Tobia. We'll watch and discuss our favorite movies in a psychological framework. If you wanted to discuss your own breakdown of legendary film characters, be sure not to miss this event!"
+    },
+    {
+      day: 27,
+      month: 9, /*This is a switch to 9 since it is an october event :) */
+      title: "Speaker Series Event with: [REDACTED]",
+      loc: " @ Zoom",
+      desc:
+        "Join our Zoom to hear our third speaker event, this time with: [REDACTED]! Hear about whats going on in the Cog Sci community as well as the research and work of [REDACTED]. A great way to network and keep up to date with the industry and research community!",
+    },
+    {
+      day: 3,
+      month: 10, 
+      title: "Neurofreaks Meeting",
+      loc: " @ BSC117",
+      desc:
+        "Come down to our room for our third meeting with Neurofreaks! It's time for another debate!",
+    },
+    {
+      day: 10,
+      month: 10, 
+      title: "Speaker Series Event with: [REDACTED]",
+      loc: " @ Zoom",
+      desc:
+        "Join our Zoom to hear our fourth speaker event, this time with: [REDACTED]! Hear about whats going on in the Cog Sci community as well as the research and work of [REDACTED]. A great way to network and keep up to date with the industry and research community!",
+    },
+    {
+      day: 17,
+      month: 10, 
+      title: "Speaker Series Event with: [REDACTED]",
+      loc: " @ Zoom",
+      desc:
+        "Join our Zoom to hear our FINAL speaker event, this time with: [REDACTED]! Hear about whats going on in the Cog Sci community as well as the research and work of [REDACTED]. A great way to network and keep up to date with the industry and research community!",
+    },
+    {
+      day: 1,
+      month: 11, 
+      title: "Game Night",
+      loc: " @ BSC117",
+      desc:
+        "Relax before finals and destress with us during our end of the semester Cog Sci game night. A casual and fun way to meet with fellow Cog Sci Members as well as chat with the E-Board before finals!"
+    },
+    {
+      day: 8,
+      month: 11, /* represents december */
+      title: "Alumni Speaker: [REDACTED]",
+      loc: " @ Zoom",
+      desc:
+        "Join our zoom to hear our FINAL Alumni speaker: [REDACTED] and their experiences with the Cog Sci club, and what they're up to post graduation. A great experience for those looking to persue Cog Sci as a major @ Rutgers!",
+    },
+
   ]);
 
   return (
@@ -262,8 +367,10 @@ const Calendar = () => {
             {calendarEvents.map((event, index) => (
               <CalendarEvent
                 day={event.day}
-                dayOfWeek={event.dayOfWeek}
+                month = {event.month}
+                /*dayOfWeek={event.dayOfWeek} Commenting this out for future use*/
                 title={event.title}
+                loc = {event.loc}
                 desc={event.desc}
                 active={index === 0}
               />
